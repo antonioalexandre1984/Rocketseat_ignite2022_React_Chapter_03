@@ -41,17 +41,7 @@ describe('SubscribeButton component', () => {
         const useSessionMocked = mocked(useSession)
         const pushMock = jest.fn()
 
-        useSessionMocked.mockReturnValueOnce([
-            {
-                user: {
-                    name: 'John Doe',
-                    email: 'john.doe@exemple.com'
-                },
-                activeSubscription: 'fake-active-Subscription'
-                expires: 'fake-expires',
-            },
-            false
-        ])
+
 
         useRouterMocked.mockReturnValueOnce({
             push: jest.fn(),
